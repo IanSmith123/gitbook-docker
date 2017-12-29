@@ -1,0 +1,14 @@
+version: "3"
+services:
+  node_gitlab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node_gitbook
+    restart: always
+    ports:
+      - "4000:4000"
+    volumes:
+      - ./gitbook:/gitbook
+    command: gitbook serve
+
