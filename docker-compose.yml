@@ -11,5 +11,6 @@ services:
       - "4000:4000"
     volumes:
       - ./book:/book
-    command: ['start.sh']
+      - ./start.sh:/start.sh
+    command: ['/start.sh']
 
