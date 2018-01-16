@@ -5,10 +5,11 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: node_gitbook
+    hostname: gitbook
 #    restart: always
     ports:
       - "4000:4000"
     volumes:
       - ./book:/book
-    command: ['gitbook', 'serve']
+    command: ['start.sh']
 
