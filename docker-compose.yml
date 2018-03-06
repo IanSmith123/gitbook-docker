@@ -13,6 +13,6 @@ services:
     volumes:
       - .:/gitbook
     environment:
-      BOOK_URL: https://github.com/iansmith123/gitbook-docker
+      BOOK_URL: https://github.com/iansmith123/-docker
     command: ['/gitbook/start.sh']
 
