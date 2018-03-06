@@ -11,9 +11,8 @@ services:
       - "4000:4000"
       - "4001:4001"
     volumes:
-      - .:/book
-      - ./start.sh:/book/start.sh
+      - .:/gitbook
     environment:
       BOOK_URL: https://github.com/iansmith123/gitbook-docker
-    command: ['/book/start.sh']
+    command: ['/gitbook/start.sh']
 
