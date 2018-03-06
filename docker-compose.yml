@@ -14,5 +14,6 @@ services:
       - ./start.sh:/start.sh
     environment:
       BOOK_URL: https://github.com/iansmith123/gitbook-docker
+      LISTEN_API: some_uri
     command: ['/start.sh']
 
