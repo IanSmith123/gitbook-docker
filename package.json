@@ -1,0 +1,20 @@
+{
+  "name": "gitbook-docker",
+  "version": "1.0.0",
+  "description": "使用gitbook构建wiki",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IanSmith123/gitbook-docker.git"
+  },
+  "author": "Les1ie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/IanSmith123/gitbook-docker/issues"
+  },
+  "homepage": "https://github.com/IanSmith123/gitbook-docker#readme"
+}

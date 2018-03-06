@@ -1,16 +1,18 @@
 version: "3"
 services:
-  node_gitlab:
+  gitbook_wiki:
     build:
       context: .
       dockerfile: Dockerfile
     container_name: node_gitbook
     hostname: gitbook
-#    restart: always
+    restart: always
     ports:
       - "4000:4000"
     volumes:
       - ./book:/book
       - ./start.sh:/start.sh
+    environment:
+      BOOK_URL: https://github.com/iansmith123/gitbook-docker
     command: ['/start.sh']
 
