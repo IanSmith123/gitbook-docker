@@ -11,11 +11,9 @@ services:
       - "4000:4000"
       - "4001:4001"
     volumes:
-      - ./book:/book
-      - ./start.sh:/start.sh
+      - .:/book
+      - ./start.sh:/book/start.sh
     environment:
       BOOK_URL: https://github.com/iansmith123/gitbook-docker
-      LISTEN_API: some_uri
-      API_PORT: 35698
-    command: ['/start.sh']
+    command: ['/book/start.sh']
 

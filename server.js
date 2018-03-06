@@ -9,7 +9,7 @@ http.createServer(function (req, res) {
     res.write('success. git repo url: '+book_url);
     res.end();
 
-    var cmd = 'git pull';
+    var cmd = 'cd book && git pull && cd ..';
     exec(cmd, function (error, stdout, stderr) {
         console.log("ok");
         console.log(stdout);
