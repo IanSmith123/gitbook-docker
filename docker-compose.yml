@@ -10,7 +10,7 @@ services:
     ports:
       - "4000:4000"
       - "4001:4001"
-      - "35729:25729"
+      - "35729:35729"
     volumes:
       - .:/gitbook
     environment:
