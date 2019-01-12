@@ -21,9 +21,27 @@ $ docker-compose up -d
 
 触发之后，gitbook将会自动`git pull`然后更新内容
 
+## nginx反代
+nginx反代配置
+```
+server { 
+    server_name example.com;
+    access_log /var/log/nginx/example_access.log;
+    error_log /var/log/nginx/example_error.log;
+
+    location / {
+        proxy_pass http://localhost:4000;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+}
+```
+
 ## todo
-- [x] 使用gitlab搭建私有仓库用作版本控制，配置webhook触发更新gitbook,
-- [ ] 使用nginx反向代理`gitbook`到`80`端口
+- [x] 配置webhook触发更新gitbook,
+- [x] 使用nginx反向代理`gitbook`到`80`端口
 
 ## refer:
 - https://github.com/GitbookIO/gitbook/blob/master/docs/setup.md
