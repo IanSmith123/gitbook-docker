@@ -40,7 +40,7 @@ server {
 ```
 
 ## todo
-- [x] 配置webhook触发更新gitbook,
+- [x] 配置webhook触发更新gitbook
 - [x] 使用nginx反向代理`gitbook`到`80`端口
 
 ## refer:
