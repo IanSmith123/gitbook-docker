@@ -8,7 +8,7 @@
 ## 运行方式
 配置docker和docker-compose环境，尔后运行将需要渲染展示的`gitbook`的`git` 仓库的`URI`填写到`docker-compose.yml`中，运行
 ```bash
-$ https://github.com/IanSmith123/gitbook-docker
+$ git clone https://github.com/IanSmith123/gitbook-docker --depth=1
 $ cd gitbook-docker
 $ docker-compose up -d
 ```
