@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: node_gitbook
     hostname: gitbook
-    restart: always
+    restart: on-failure
     ports:
       - "4000:4000"
       - "4001:4001"
